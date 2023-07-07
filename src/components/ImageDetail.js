@@ -1,12 +1,14 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 // create a component
-const ImageDetail = () => {
+const ImageDetail = (props) => {
     return (
         <View style={styles.container}>
-            <Text>ImageDetail</Text>
+            <Text>{props.title}</Text>
+            <Image source={props.imageSource} />
+            <Text>Image Score - {props.imageScore}</Text>
         </View>
     );
 };
